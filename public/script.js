@@ -2,16 +2,7 @@ const taskForm = document.getElementById("taskForm");
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
 const totalTasks = document.getElementById("totalTasks");
-const dateInfo = document.getElementById("dateInfo");
 const clearCompleted = document.getElementById("clearCompleted");
-const chipButtons = document.querySelectorAll(".chips button");
-
-dateInfo.textContent = new Date().toLocaleDateString("id-ID", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  year: "numeric"
-});
 
 let tasks = JSON.parse(localStorage.getItem("tugas12paasTasks")) || [
   { id: 1, text: "Mencari penyedia PaaS gratis", done: true },
@@ -78,12 +69,6 @@ taskForm.addEventListener("submit", (event) => {
   event.preventDefault();
   addTask(taskInput.value);
   taskInput.value = "";
-});
-
-chipButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    addTask(button.dataset.task);
-  });
 });
 
 clearCompleted.addEventListener("click", () => {
