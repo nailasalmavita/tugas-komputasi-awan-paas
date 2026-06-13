@@ -70,14 +70,8 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 6px;
-  font-size: 24px;
-}
-
-.card-header p {
   margin: 0;
-  color: #6f665d;
-  line-height: 1.7;
+  font-size: 24px;
 }
 
 .summary {
@@ -127,22 +121,9 @@ button:hover {
   opacity: 0.9;
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 14px 0 18px;
-}
-
-.chips button {
-  background: #efe6d8;
-  color: #4a4037;
-  padding: 9px 12px;
-}
-
 .task-list {
   list-style: none;
-  margin: 0;
+  margin: 18px 0 0;
   padding: 0;
   display: grid;
   gap: 10px;
